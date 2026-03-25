@@ -1,0 +1,26 @@
+{
+  "name": "AI Proxy",
+  "version": "1.0.0",
+  "slug": "ai_proxy",
+  "description": "Home Assistant add-on that injects entity context into an AI proxy.",
+  "url": "https://github.com/honhan0210/ai-proxy-ha-addon",
+  "startup": "services",
+  "boot": "auto",
+  "host_network": true,
+  "homeassistant_api": true,
+  "arch": ["amd64", "aarch64"],
+  "ports": {
+    "9000/tcp": 9000
+  },
+  "ports_description": {
+    "9000/tcp": "AI Proxy API"
+  },
+  "options": {
+    "home_assistant_token": "",
+    "gemini_api_url": "http://localhost:8000/v1/chat/completions"
+  },
+  "schema": {
+    "home_assistant_token": "str?",
+    "gemini_api_url": "str?"
+  }
+}
